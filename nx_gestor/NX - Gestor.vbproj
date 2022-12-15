@@ -1,0 +1,534 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B637E110-2030-425F-993F-8546E86CBF38}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>nx_gestor.My.MyApplication</StartupObject>
+    <RootNamespace>nx_gestor</RootNamespace>
+    <AssemblyName>NX - Gestor</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>NX - Gestor.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>NX - Gestor.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="ClientesCad.Designer.vb">
+      <DependentUpon>ClientesCad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientesCad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras.Designer.vb">
+      <DependentUpon>Compras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compras.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dbclientDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbclientDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbforncDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbforncDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbgroupDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbgroupDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbprodDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbprodDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbsectionDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbsectionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbsubgroupDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbsubgroupDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EntradaNFe.Designer.vb">
+      <DependentUpon>EntradaNFe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EntradaNFe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FornecedoresCad.Designer.vb">
+      <DependentUpon>FornecedoresCad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FornecedoresCad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LicenseDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LicenseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProdutosCad.Designer.vb">
+      <DependentUpon>ProdutosCad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProdutosCad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemUI\CadGroup.Designer.vb">
+      <DependentUpon>CadGroup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SystemUI\CadGroup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemUI\CadSection.Designer.vb">
+      <DependentUpon>CadSection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SystemUI\CadSection.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemUI\CadSubGroup.Designer.vb">
+      <DependentUpon>CadSubGroup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SystemUI\CadSubGroup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemUI\CadUser.Designer.vb">
+      <DependentUpon>CadUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SystemUI\CadUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fornecedores.Designer.vb">
+      <DependentUpon>Fornecedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fornecedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes.Designer.vb">
+      <DependentUpon>Clientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemUI\Funcoes.Designer.vb">
+      <DependentUpon>Funcoes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SystemUI\Funcoes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemUI\InterfUI.Designer.vb">
+      <DependentUpon>InterfUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SystemUI\InterfUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemUI\Msg.Designer.vb">
+      <DependentUpon>Msg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SystemUI\Msg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Produtos.Designer.vb">
+      <DependentUpon>Produtos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Produtos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemUI\Pay_License.Designer.vb">
+      <DependentUpon>Pay_License.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SystemUI\Pay_License.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemUI\RecoveryAccount.Designer.vb">
+      <DependentUpon>RecoveryAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SystemUI\RecoveryAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemUI\Status_activ.Designer.vb">
+      <DependentUpon>Status_activ.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SystemUI\Status_activ.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemUI\UserSetings.Designer.vb">
+      <DependentUpon>UserSetings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SystemUI\UserSetings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="usrdtDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>usrdtDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Vendas.Designer.vb">
+      <DependentUpon>Vendas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vendas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Clientes.resx">
+      <DependentUpon>Clientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientesCad.resx">
+      <DependentUpon>ClientesCad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras.resx">
+      <DependentUpon>Compras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntradaNFe.resx">
+      <DependentUpon>EntradaNFe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fornecedores.resx">
+      <DependentUpon>Fornecedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FornecedoresCad.resx">
+      <DependentUpon>FornecedoresCad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produtos.resx">
+      <DependentUpon>Produtos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProdutosCad.resx">
+      <DependentUpon>ProdutosCad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemUI\CadGroup.resx">
+      <DependentUpon>CadGroup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemUI\CadSection.resx">
+      <DependentUpon>CadSection.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemUI\CadSubGroup.resx">
+      <DependentUpon>CadSubGroup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemUI\CadUser.resx">
+      <DependentUpon>CadUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemUI\Funcoes.resx">
+      <DependentUpon>Funcoes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemUI\InterfUI.resx">
+      <DependentUpon>InterfUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemUI\Msg.resx">
+      <DependentUpon>Msg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemUI\Pay_License.resx">
+      <DependentUpon>Pay_License.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemUI\RecoveryAccount.resx">
+      <DependentUpon>RecoveryAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemUI\Status_activ.resx">
+      <DependentUpon>Status_activ.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemUI\UserSetings.resx">
+      <DependentUpon>UserSetings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vendas.resx">
+      <DependentUpon>Vendas.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="dbclientDataSet.xsc">
+      <DependentUpon>dbclientDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbclientDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbclientDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbclientDataSet.xss">
+      <DependentUpon>dbclientDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbforncDataSet.xsc">
+      <DependentUpon>dbforncDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbforncDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbforncDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbforncDataSet.xss">
+      <DependentUpon>dbforncDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbgroupDataSet.xsc">
+      <DependentUpon>dbgroupDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbgroupDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbgroupDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbgroupDataSet.xss">
+      <DependentUpon>dbgroupDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbprodDataSet.xsc">
+      <DependentUpon>dbprodDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbprodDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbprodDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbprodDataSet.xss">
+      <DependentUpon>dbprodDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbsectionDataSet.xsc">
+      <DependentUpon>dbsectionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbsectionDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbsectionDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbsectionDataSet.xss">
+      <DependentUpon>dbsectionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbsubgroupDataSet.xsc">
+      <DependentUpon>dbsubgroupDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbsubgroupDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbsubgroupDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbsubgroupDataSet.xss">
+      <DependentUpon>dbsubgroupDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LicenseDataSet.xsc">
+      <DependentUpon>LicenseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LicenseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LicenseDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LicenseDataSet.xss">
+      <DependentUpon>LicenseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="usrdtDataSet.xsc">
+      <DependentUpon>usrdtDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="usrdtDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>usrdtDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="usrdtDataSet.xss">
+      <DependentUpon>usrdtDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\DataSources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings_Icon.png" />
+    <None Include="Resources\Dev_icon.png" />
+    <None Include="Resources\Client_icon.png" />
+    <None Include="Resources\Fornecedor_icon.png" />
+    <None Include="Resources\Sec_icon.PNG" />
+    <None Include="Resources\Info_icon.png" />
+    <None Include="Resources\ErrorRelat_icon.png" />
+    <None Include="Resources\Compras_icon.png" />
+    <None Include="Resources\Vendas_icon.png" />
+    <None Include="Resources\Prod_icons.png" />
+    <None Include="Resources\Save_icon.png" />
+    <None Include="Resources\Alterar_icon.png" />
+    <None Include="Resources\User_img.png" />
+    <None Include="Resources\Wallpaper1.jpg" />
+    <None Include="Resources\Load_mov.gif" />
+    <None Include="Resources\Start_icon.png" />
+    <None Include="Resources\Logo_img.png" />
+    <None Include="Resources\Wallpaper2.jpg" />
+    <None Include="Resources\PassIcon.png" />
+    <None Include="Resources\Alert_icon.png" />
+    <None Include="Resources\Error_icon.png" />
+    <None Include="Resources\Enviar_icon.png" />
+    <Content Include="dbclient.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dbfornc.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dbgroup.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dbprod.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dbsection.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dbsubgroup.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="License.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Close_icon.png" />
+    <None Include="Resources\BuyIcon.png" />
+    <None Include="Resources\SecurityIcon.png" />
+    <None Include="Resources\VerifIcon.png" />
+    <None Include="Resources\ProIcon.png" />
+    <None Include="Resources\LocalizaIcon.png" />
+    <None Include="Resources\DeleteIcon.png" />
+    <None Include="Resources\NewIcon.png" />
+    <None Include="Resources\PayIcon.png" />
+    <None Include="Resources\AddNewUserIcon.png" />
+    <None Include="Resources\CadAllsIcon.png" />
+    <None Include="Resources\Background.jpg" />
+    <None Include="Resources\Loading.gif" />
+    <None Include="Resources\FinishIcon.png" />
+    <Content Include="usrdt.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
